@@ -1,6 +1,9 @@
 #!/bin/sh
 
 echo "Start small, build up incrementally!"
-rpm -qa ansible
-rpm -qa git
-ls -l /opt/bootstrap_k8s/omv
+which ansible
+# TODO: Add vagrant to the runtime image
+#       vagrant isn't in EPEL7, so may need to switch to Fedora
+which vagrant
+pwd
+ls .

@@ -42,3 +42,10 @@ Ansible scripts](https://github.com/eparis/kubernetes-ansible) without
 end users of the bootstrapping operation needing to care about those
 implementation details.
 
+Updating git subtrees
+---------------------
+
+This repo uses git subtrees to make some subcomponents available to the image
+build process.
+
+To update "Oh My Vagrant" run `update-omv.sh`.
