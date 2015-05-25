@@ -8,7 +8,7 @@ RUN yum install -y --setopt=tsflags=nodocs ansible && yum clean all
 
 ADD content/omv /opt/bootstrap_k8s/omv
 
-# TODO: Add the Kuberbetes Ansible files to avoiding needing git at runtime
+ADD content/kubernetes-ansible /opt/bootstrap_k8s/kubernetes-ansible
 
 ADD content/bootstrap_k8s.sh /usr/bin/
 

@@ -7,3 +7,4 @@ which ansible
 which vagrant
 pwd
 ls .
+ls ../kubernetes-ansible
