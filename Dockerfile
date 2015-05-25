@@ -1,10 +1,12 @@
-FROM centos:centos7
+FROM fedora:21
 
 MAINTAINER Nick Coghlan <ncoghlan@redhat.com>
 
-RUN echo -e "[epel]\nname=epel\nenabled=1\nbaseurl=https://dl.fedoraproject.org/pub/epel/7/x86_64/\ngpgkey=https://getfedora.org/static/352C64E5.txt" > /etc/yum.repos.d/epel.repo
+RUN yum install -y --setopt=tsflags=nodocs vagrant vagrant-libvirt && \
+    yum clean all
 
-RUN yum install -y --setopt=tsflags=nodocs ansible && yum clean all
+RUN yum install -y --setopt=tsflags=nodocs ansible && \
+    yum clean all
 
 ADD content/omv /opt/bootstrap_k8s/omv
 
