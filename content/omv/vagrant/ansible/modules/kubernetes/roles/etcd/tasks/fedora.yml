@@ -1,6 +1,0 @@
----
-- name: Install etcd from Fedora
-  dnf: pkg=etcd state=latest
-  notify:
-          - restart etcd
-  when: not is_atomic
